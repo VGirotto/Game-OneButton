@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/flag/flag-1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/flag/flag-3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/flag/flag-0.png" type="Texture" id=4]
+[ext_resource path="res://Assets/flag/flag-2.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Flag.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.69734, 16.532 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "flag",
+"speed": 4.0
+} ]
+
+[node name="Flag" type="Area2D"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.28061, 3.92862 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "flag"
+frame = 1
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_Flag_body_entered"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Platforms/Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Platforms/limit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Stage.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Platforms/miniPlatform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Flag.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Platforms/largePlatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/text/TextMove.tscn" type="PackedScene" id=8]
+
+[node name="Stage2" type="Node2D"]
+script = ExtResource( 4 )
+stage = 2
+
+[node name="limit" parent="." instance=ExtResource( 3 )]
+
+[node name="Platform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 385 )
+
+[node name="Flag" parent="." instance=ExtResource( 6 )]
+position = Vector2( 561.588, 36.8561 )
+
+[node name="largePlatform" parent="." instance=ExtResource( 7 )]
+position = Vector2( 210.718, 304.056 )
+
+[node name="largePlatform2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 260.922, 86.9742 )
+
+[node name="largePlatform3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 471.64, 130.108 )
+invisible = true
+
+[node name="largePlatform4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 558.614, 61.5183 )
+
+[node name="miniPlatform" parent="." instance=ExtResource( 5 )]
+position = Vector2( 130.815, 246.78 )
+
+[node name="miniPlatform2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 61.5183, 186.676 )
+time = 3
+invisible = true
+
+[node name="miniPlatform3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 173.948, 149.2 )
+invisible = true
+
+[node name="miniPlatform4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 353.553, 183.141 )
+invisible = true
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 33.5267, 354.132 )
+
+[node name="TextMove" parent="." instance=ExtResource( 8 )]
+margin_right = 600.0
+margin_bottom = 400.0

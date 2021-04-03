@@ -1,0 +1,60 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Assets/player/idle-1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/playerFSM.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/player.gd" type="Script" id=3]
+[ext_resource path="res://Assets/player/walk-0.png" type="Texture" id=4]
+[ext_resource path="res://Assets/player/walk-3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/player/walk-2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/player/walk-1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/player/jump-2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/player/jump-4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/player/jump-1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/player/jump-3.png" type="Texture" id=11]
+[ext_resource path="res://Assets/player/jump-5.png" type="Texture" id=12]
+[ext_resource path="res://Assets/player/jump-6.png" type="Texture" id=13]
+[ext_resource path="res://Assets/player/fall-0.png" type="Texture" id=14]
+[ext_resource path="res://Assets/player/fall-2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/player/fall-1.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.7549, 14.1498 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.00494403, 1.89978 )
+shape = SubResource( 2 )
+
+[node name="StateMachine" type="Node2D" parent="."]
+script = ExtResource( 2 )
