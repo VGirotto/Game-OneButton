@@ -31,6 +31,7 @@ time = 1
 [node name="largePlatform" parent="." instance=ExtResource( 5 )]
 position = Vector2( 434.948, 214.299 )
 time = 4
+upSpike = false
 
 [node name="largePlatform2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 585.751, 62.7024 )

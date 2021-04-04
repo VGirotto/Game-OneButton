@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/platform/platform40x10.png" type="Texture" id=1]
 [ext_resource path="res://Assets/platform/platform40x10-invisible.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/platform/miniPlatform.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Platforms/SmallSpikes.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 5 )
@@ -32,4 +33,9 @@ animation = "enable"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="SmallSpikes" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 0, 9.92122 )
+rotation = 3.14159
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
