@@ -50,9 +50,9 @@ invisible = true
 position = Vector2( 353.553, 183.141 )
 invisible = true
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 33.5267, 354.132 )
-
 [node name="TextMove" parent="." instance=ExtResource( 8 )]
 margin_right = 600.0
 margin_bottom = 400.0
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 33.5267, 354.132 )

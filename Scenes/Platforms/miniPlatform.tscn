@@ -36,6 +36,5 @@ wait_time = 2.0
 
 [node name="SmallSpikes" parent="." instance=ExtResource( 4 )]
 visible = false
-position = Vector2( 0, 9.92122 )
-rotation = 3.14159
+position = Vector2( 0, -9.822 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

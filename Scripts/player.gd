@@ -36,8 +36,8 @@ func _physics_process(delta):
 func _apply_movement():
 	if !parent.movePlatformH and !parent.movePlatformV and !parent.rotatePlatform:
 		movedir = -int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right"))
-	else:
-		movedir = 0
+#	else:
+#		movedir = 0
 		
 	velocity.x = movedir * SPEED
 	velocity.y += GRAVITY

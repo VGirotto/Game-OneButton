@@ -9,5 +9,6 @@ func _ready():
 func _on_Flag_body_entered(body):
 	if body is KinematicBody2D: # é o player
 		#terminou fase
+		Songs.get_node("flag").play()
 		yield(get_tree().create_timer(0.3), "timeout")
 		get_tree().change_scene("res://Scenes/stages/Stage" + String(parent.stage+1) + ".tscn")

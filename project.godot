@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="OneButton"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/Title.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Songs="*res://Scenes/Songs.tscn"
 
 [display]
 

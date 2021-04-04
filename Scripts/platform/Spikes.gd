@@ -14,4 +14,5 @@ func _ready():
 
 func _on_SmallSpikes_body_entered(body):
 	if body is KinematicBody2D:
+		Songs.get_node("spikes").play()
 		parent.get_node("Player").position = parent.initialPos

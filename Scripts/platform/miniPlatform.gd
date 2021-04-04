@@ -24,21 +24,17 @@ func _ready():
 			$SmallSpikes.visible = true
 			$SmallSpikes/CollisionShape2D.disabled = false
 			if upSpike:
-				$SmallSpikes.position = Vector2(0, -9.822)
-				$SmallSpikes.rotation = 0
+				self.rotation_degrees = 0
 			else:
-				$SmallSpikes.position = Vector2(0, 9.822)
-				$SmallSpikes.rotation = 180
+				self.rotation_degrees = 180
 		else:
 			print("existe")
 			$LargeSpikes.visible = true
 			$LargeSpikes/CollisionShape2D.disabled = false
 			if upSpike:
-				$LargeSpikes.position = Vector2(0, -9.822)
-				$LargeSpikes.rotation = 0
+				self.rotation_degrees = 0
 			else:
-				$LargeSpikes.position = Vector2(0, 9.822)
-				$LargeSpikes.rotation = 180
+				self.rotation_degrees = 180
 
 func _on_Timer_timeout():
 	if enable:
@@ -54,13 +50,13 @@ func _physics_process(delta):
 	if parent.movePlatformH:
 		if moveH:
 			if Input.is_action_pressed("ui_left"):
-				position.x -= 5
+				position.x += -5
 			elif Input.is_action_pressed("ui_right"):
 				position.x += 5
 	if parent.movePlatformV:
 		if moveV:
 			if Input.is_action_pressed("ui_up"):
-				position.y -= 5
+				position.y += -5
 			elif Input.is_action_pressed("ui_down"):
 				position.y += 5
 	if parent.rotatePlatform:
@@ -69,4 +65,3 @@ func _physics_process(delta):
 				rotation_degrees -= 5
 			elif Input.is_action_pressed("ui_down"):
 				rotation_degrees += 5
-			

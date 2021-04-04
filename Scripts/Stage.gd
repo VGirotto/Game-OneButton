@@ -3,7 +3,7 @@ extends Node2D
 
 export var stage = 1
 export var initialX = 42
-export var initialY = 354
+export var initialY = 353
 
 var initialPos = Vector2(initialX, initialY)
 
@@ -19,7 +19,12 @@ var buttonR = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Songs.get_node("sot").connect("finished", self, "_on_SOT_finished")
+	if !Songs.get_node("sot").is_playing():
+		Songs.get_node("sot").play()
+
+func _on_SOT_finished():
+	Songs.get_node("sot").play()
 
 func _input(event):
 	if event.is_action_pressed("moveH"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Platforms/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Platforms/miniPlatform.tscn" type="PackedScene" id=2]
@@ -9,11 +9,12 @@
 [ext_resource path="res://Scripts/Stage.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Buttons.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/text/TextMove.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/text/Huds.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/platform/seta2.png" type="Texture" id=11]
 
-[node name="Stage4" type="Node2D"]
+[node name="Stage6" type="Node2D"]
 script = ExtResource( 7 )
-stage = 4
+stage = 6
 
 [node name="limit" parent="." instance=ExtResource( 6 )]
 
@@ -77,3 +78,6 @@ time = 1
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 27.9708, 354.132 )
+
+[node name="Huds" parent="." instance=ExtResource( 10 )]
+position = Vector2( 411, 336 )
