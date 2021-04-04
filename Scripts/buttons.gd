@@ -11,7 +11,8 @@ func _ready():
 
 func _on_Buttons_body_entered(body):
 	if body is KinematicBody2D:
-		Songs.get_node("button").play()
+		if visible:
+			Songs.get_node("button").play()
 		visible = false
 		if letter == "H":
 			parent.buttonH = true

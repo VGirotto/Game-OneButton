@@ -8,7 +8,7 @@ extends RichTextLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var text = "\n\n		Go back to your keyboard!\n\n\n\n		It's the end of your adventure!"
+	var text = "\n\n		Go back to your keyboard!\n\n\n\n		It's the end of your journey!"
 	#create a timer to print text like a typewriter
 	var t = Timer.new()
 	t.set_wait_time(.04)

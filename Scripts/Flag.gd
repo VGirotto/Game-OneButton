@@ -11,4 +11,9 @@ func _on_Flag_body_entered(body):
 		#terminou fase
 		Songs.get_node("flag").play()
 		yield(get_tree().create_timer(0.3), "timeout")
-		get_tree().change_scene("res://Scenes/stages/Stage" + String(parent.stage+1) + ".tscn")
+		if parent.stage == 10:
+			yield(get_tree().create_timer(0.5), "timeout")
+			Songs.get_node("sot").stop()
+			get_tree().change_scene("res://Scenes/End.tscn")
+		else:
+			get_tree().change_scene("res://Scenes/stages/Stage" + String(parent.stage+1) + ".tscn")
