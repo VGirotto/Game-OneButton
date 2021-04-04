@@ -43,8 +43,8 @@ time = 4
 [node name="Flag" parent="." instance=ExtResource( 7 )]
 position = Vector2( 578.633, 37.6993 )
 
-[node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 42.2918, 353.433 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 42, 353.5 )
 
 [node name="TextMove" parent="." instance=ExtResource( 8 )]
 margin_right = 600.0

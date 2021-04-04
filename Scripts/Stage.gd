@@ -2,6 +2,10 @@ extends Node2D
 
 
 export var stage = 1
+export var initialX = 42
+export var initialY = 354
+
+var initialPos = Vector2(initialX, initialY)
 
 onready var label = get_node("TextMove")
 

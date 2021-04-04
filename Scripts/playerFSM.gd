@@ -16,7 +16,6 @@ func _input(event):
 				yield(get_tree().create_timer(0.1), "timeout")
 				parent.velocity.y = -parent.JUMP_SPEED    #joga pra cima
 				add_pilha("jump")
-				print(pilha)
 
 func _state_logic(delta):
 	parent._apply_movement()
@@ -55,21 +54,16 @@ func _enter_state(new_state, old_state):
 	#print(new_state)
 	match new_state:
 		states.parado:
-			#print(String(pilha.size()) + "pilha")
 			parent.anim.play("idle")
 			if pilha.size() > 0:
 				remove_pilha()
 			
 		states.walk:
-			#print(String(pilha.size()) + "pilha")
 			parent.anim.play("walk")
 			if pilha.size() > 0:
 				remove_pilha()
 			
 		states.jump:
-			i += 1
-			print("jump" + String(i))
-			#print("pilha" + String(pilha.size()))
 			pass
 			
 		states.fall:

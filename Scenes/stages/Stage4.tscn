@@ -11,9 +11,9 @@
 [ext_resource path="res://Scenes/text/TextMove.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/platform/seta2.png" type="Texture" id=11]
 
-[node name="Stage3" type="Node2D"]
+[node name="Stage4" type="Node2D"]
 script = ExtResource( 7 )
-stage = 3
+stage = 4
 
 [node name="limit" parent="." instance=ExtResource( 6 )]
 
