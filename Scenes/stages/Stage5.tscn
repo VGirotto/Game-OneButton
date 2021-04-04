@@ -19,58 +19,53 @@ stage = 4
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 300, 385 )
-espinhos = true
 
 [node name="Flag" parent="." instance=ExtResource( 3 )]
-position = Vector2( 39.6587, 245.392 )
+position = Vector2( 39.6587, 44.4178 )
 
 [node name="largePlatform" parent="." instance=ExtResource( 4 )]
-position = Vector2( 40.1261, 270.204 )
+position = Vector2( 40.1261, 69.2298 )
 
 [node name="largePlatform2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 167.022, 50.8542 )
-moveV = true
+position = Vector2( 124.668, 69.2707 )
+moveH = true
 
 [node name="Sprite2" type="Sprite" parent="largePlatform2"]
-position = Vector2( -6, 1 )
+position = Vector2( 5.59477, 0.108093 )
+rotation = 1.5708
 texture = ExtResource( 11 )
 
 [node name="Sprite3" type="Sprite" parent="largePlatform2"]
-position = Vector2( 6, 1 )
-rotation = 3.14159
+position = Vector2( -5.89206, 0.108093 )
+rotation = -1.5708
 texture = ExtResource( 11 )
 
 [node name="largePlatform3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 557.139, 208.913 )
-invisible = true
+position = Vector2( 474.731, 202.186 )
 
 [node name="largePlatform4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 419.683, 138.515 )
+position = Vector2( 557.59, 69.271 )
 
 [node name="TextMove" parent="." instance=ExtResource( 9 )]
 margin_right = 600.0
 margin_bottom = 400.0
 
 [node name="Buttons" parent="." instance=ExtResource( 8 )]
-position = Vector2( 309.666, 90.2446 )
-letter = "V"
+position = Vector2( 556.324, 49.3011 )
 
 [node name="miniPlatform" parent="." instance=ExtResource( 2 )]
-position = Vector2( 272.097, 307.246 )
-invisible = true
+position = Vector2( 205.666, 320.7 )
 
 [node name="miniPlatform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 365.641, 275.579 )
+position = Vector2( 287.438, 284.829 )
 time = 1
-invisible = true
 
 [node name="miniPlatform3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 458.959, 243.928 )
+position = Vector2( 371.506, 256.541 )
 time = 1
 
 [node name="miniPlatform5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 309.498, 109.904 )
-time = 4
+position = Vector2( 422.178, 121.677 )
 invisible = true
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
