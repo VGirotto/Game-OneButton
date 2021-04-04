@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/platform/seta2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Stage.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/text/TextMove.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Platforms/limit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Platforms/Platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Platforms/largePlatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Flag.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/text/Huds.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Platforms/miniPlatform.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Buttons.tscn" type="PackedScene" id=11]
+
+[node name="Stage7" type="Node2D"]
+script = ExtResource( 2 )
+stage = 7
+
+[node name="limit" parent="." instance=ExtResource( 4 )]
+
+[node name="Platform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 300, 385 )
+espinhos = true
+
+[node name="Flag" parent="." instance=ExtResource( 8 )]
+position = Vector2( 557.779, 31.0107 )
+
+[node name="largePlatform" parent="." instance=ExtResource( 7 )]
+position = Vector2( 558.247, 55.8226 )
+
+[node name="largePlatform2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 150.018, 60.6774 )
+moveH = true
+
+[node name="Sprite2" type="Sprite" parent="largePlatform2"]
+position = Vector2( 5.59477, 0.108093 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="largePlatform2"]
+position = Vector2( -5.89206, 0.108093 )
+rotation = -1.5708
+texture = ExtResource( 1 )
+
+[node name="largePlatform6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 57.6179, 62.3516 )
+moveV = true
+
+[node name="Sprite4" type="Sprite" parent="largePlatform6"]
+position = Vector2( 7.77214, 0.516335 )
+texture = ExtResource( 1 )
+
+[node name="Sprite5" type="Sprite" parent="largePlatform6"]
+position = Vector2( -6.93576, 0.321625 )
+rotation = 3.14159
+texture = ExtResource( 1 )
+
+[node name="largePlatform3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 153.075, 158.994 )
+moveH = true
+
+[node name="Sprite2" type="Sprite" parent="largePlatform3"]
+position = Vector2( 5.59477, 0.108093 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="largePlatform3"]
+position = Vector2( -5.89206, 0.108093 )
+rotation = -1.5708
+texture = ExtResource( 1 )
+
+[node name="TextMove" parent="." instance=ExtResource( 3 )]
+margin_right = 600.0
+margin_bottom = 400.0
+
+[node name="Buttons2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 419.285, 206.458 )
+
+[node name="largePlatform5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 517.285, 184.111 )
+
+[node name="miniPlatform4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 418.689, 224.999 )
+
+[node name="Buttons" parent="." instance=ExtResource( 11 )]
+position = Vector2( 197.652, 266.921 )
+letter = "R"
+
+[node name="miniPlatform" parent="." instance=ExtResource( 10 )]
+position = Vector2( 108.962, 326.586 )
+
+[node name="miniPlatform2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 197.257, 293.169 )
+time = 1
+
+[node name="largePlatform4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 311.899, 259.157 )
+rotate = true
+spikes = true
+
+[node name="miniPlatform3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 368.143, 111.906 )
+time = 1
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 27.9708, 354.132 )
+
+[node name="Huds" parent="." instance=ExtResource( 9 )]
+position = Vector2( 411, 336 )
+
+[node name="Buttons3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 516, 161 )
+letter = "V"
